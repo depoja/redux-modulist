@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const src = {
   lib: path.resolve(__dirname, "../packages/redux-modulist"),
-  docs: path.resolve(__dirname, "../packages/redux-modulist-docs")
+  example: path.resolve(__dirname, "../packages/redux-modulist-example")
 };
 
 const config = new Config().merge({
@@ -14,7 +14,7 @@ const config = new Config().merge({
     modules: ["node_modules"],
     alias: {
       _lib: src.lib,
-      _docs: src.docs
+      _example: src.example
     }
   },
   module: {
@@ -32,7 +32,7 @@ const config = new Config().merge({
   },
   entry: {
     dist: src.lib,
-    docs: src.docs
+    example: src.example
   },
   output: {
     libraryTarget: "umd",
@@ -44,7 +44,7 @@ const config = new Config().merge({
     new HtmlWebpackPlugin({
       excludeChunks: ["dist"],
       filename: path.resolve(__dirname, "../build/index.html"),
-      template: path.resolve(__dirname, "../packages/redux-modulist-docs/index.html"),
+      template: path.resolve(__dirname, "../packages/redux-modulist-example/index.html"),
       title: "Redux Modulist"
     })
   ]

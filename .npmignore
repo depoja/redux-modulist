@@ -1,2 +1,20 @@
-# Source dir
-src
+# Directories
+build/*
+!build/dist.js
+docs
+node_modules
+packages
+webpack
+
+# Files
+.babelrc
+.gitignore
+.npmignore
+.prettierrc
+.travis.yml
+lerna.json
+webpack.config.json
+SUMMARY.md
+
+# Editor
+.vscode

@@ -3,7 +3,7 @@ const Config = require("webpack-config").Config;
 
 const dev = new Config().extend("./webpack/base.config").merge({
   entry: {
-    docs: ["babel-polyfill", "react-hot-loader/patch", "./packages/redux-modulist-docs"]
+    example: ["babel-polyfill", "react-hot-loader/patch", "./packages/redux-modulist-example"]
   },
   plugins: [new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin()],
   devtool: "source-map",
