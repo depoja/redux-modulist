@@ -1,5 +1,5 @@
 # Directories
-build/*.js
+build/*
 !build/dist.js
 docs
 node_modules
