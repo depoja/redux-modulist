@@ -1,0 +1,52 @@
+{
+  "name": "redux-modulist",
+  "version": "0.0.1",
+  "description": "Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate",
+  "main": "build/dist.js",
+  "scripts": {
+    "clean": "find ./packages -name 'node_modules' -exec rm -rf '{}' +",
+    "bootstrap": "lerna bootstrap --hoist",
+    "start": "npm run bootstrap && webpack-dev-server --env=dev",
+    "build": "npm run clean && npm run bootstrap && webpack -p --env=prod",
+    "analyze": "npm run bootstrap && webpack -p --env=analyze"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turningspace/redux-modulist.git"
+  },
+  "keywords": [
+    "[\"redux\"",
+    "\"react\"",
+    "\"modular\"",
+    "\"architecture\"]"
+  ],
+  "author": "Klint Mane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turningspace/redux-modulist/issues"
+  },
+  "homepage": "https://github.com/turningspace/redux-modulist#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "flow-bin": "^0.59.0",
+    "html-webpack-plugin": "^2.30.1",
+    "lerna": "^2.5.1",
+    "react-hot-loader": "^3.1.3",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^3.8.1",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-config": "^7.5.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
