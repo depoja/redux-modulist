@@ -8,4 +8,6 @@
 <h4 align="center">Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate.</h4>
 <br>
 
+[![Build Status](https://travis-ci.org/turningspace/redux-modulist.svg?branch=master)](https://travis-ci.org/turningspace/redux-modulist)
+
 __Redux Modulist__ is a utility library that aims to *simplify* the way redux applications are built and scaled, by providing helpers for making your redux components fully-modular.
