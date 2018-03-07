@@ -6,8 +6,8 @@ import { TodoContainer } from "./styles";
 const View = ({ Module }) => (
   <TodoContainer>
     <header>{Module.instance}</header>
-    <Module.views.adder />
-    <Module.views.todos Module={Module} />
+    <Module.view.adder />
+    <Module.view.todos Module={Module} />
   </TodoContainer>
 );
 
