@@ -1,12 +1,11 @@
-const deepFindKey = (obj, prop) => {
-  const immediate = obj && obj[prop];
-  if (!!immediate) {
-    return immediate;
+const deepFindModule = (obj, instance) => {
+  if (obj && obj._instance === instance) {
+    return obj._module;
   }
   for (let key in obj) {
     const val = obj[key];
     if (typeof val === "object") {
-      const found = deepFindKey(val, prop);
+      const found = deepFindModule(val, instance);
       if (found) {
         return found;
       }
@@ -22,4 +21,4 @@ const genUID = () =>
 
 const uniqueArr = arr => [...new Set(arr)];
 
-export { deepFindKey, genUID, uniqueArr };
+export { deepFindModule, genUID, uniqueArr };
