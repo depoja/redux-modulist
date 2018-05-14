@@ -2,6 +2,9 @@
 # Please uncomment entry when publishing from npm instad of git
 # dist
 
+# cypress
+cypress/screenshots/*
+cypress/videos/*
 
 # Logs
 logs

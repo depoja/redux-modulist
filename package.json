@@ -8,7 +8,10 @@
     "bootstrap": "lerna bootstrap --hoist",
     "start": "npm run bootstrap && webpack-dev-server --env=dev",
     "build": "npm run clean && npm run bootstrap && webpack -p --env=prod",
-    "analyze": "npm run bootstrap && webpack -p --env=analyze"
+    "analyze": "npm run bootstrap && webpack -p --env=analyze",
+    "cy": "cypress open",
+    "cy-headless": "cypress run",
+    "cy-test": "cypress run --record --key 13738d3f-cf83-4160-a754-16f041e01008"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.7",
+    "cypress": "^2.1.0",
     "flow-bin": "^0.59.0",
     "html-webpack-plugin": "^2.30.1",
     "lerna": "^2.5.1",
