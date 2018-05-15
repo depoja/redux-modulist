@@ -4,19 +4,15 @@
   "description": "Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate",
   "main": "build/dist.js",
   "scripts": {
-    "clean": "find ./packages -name 'node_modules' -exec rm -rf '{}' +",
-    "bootstrap": "lerna bootstrap --hoist",
-
-    "start": "npm run bootstrap && webpack-dev-server --env=dev",
-
-    "build": "npm run clean && npm run bootstrap && webpack -p --env=prod",
-    "analyze": "npm run bootstrap && webpack -p --env=analyze",
-
-    "cy": "cypress open",
-    "test-cy": "cypress run",
-    "test-jest": "jest",
-
-    "test": "npm run test-jest && npm run test-cy"
+    "init": "npm i lerna && npm run init:quick",
+    "init:quick": "lerna bootstrap --hoist",
+    "start": "webpack-dev-server --env=dev",
+    "build": "webpack -p --env=prod",
+    "build:detailed": "webpack -p --env=analyze",
+    "test": "npm run test:jest && start-server-and-test start http://localhost:3100 test:cy",
+    "test:cy": "cypress run",
+    "test:jest": "jest",
+    "cy": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -50,10 +46,12 @@
     "flow-bin": "^0.59.0",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.4.3",
-    "lerna": "^2.5.1",
+    "lerna": "^2.11.0",
     "react-hot-loader": "^3.1.3",
+    "start-server-and-test": "^1.4.1",
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.1.2",
+    "wait-on": "^2.1.0",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-config": "^7.5.0",

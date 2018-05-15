@@ -4,10 +4,8 @@ node_js:
 
 jobs:
   include:
-    - stage: install
-      script: npm install
-    - stage: start
-      script: npm run start
+    - stage: initialize
+      script: npm run init
     - stage: test
       script: npm run test
     - stage: build
