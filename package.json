@@ -16,7 +16,7 @@
     "test-cy": "cypress run",
     "test-jest": "jest",
 
-    "test": "npm run test-jest && npm run start | npm run test-cy"
+    "test": "npm run test-jest && npm run test-cy"
   },
   "repository": {
     "type": "git",
