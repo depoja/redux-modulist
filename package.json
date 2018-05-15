@@ -6,12 +6,17 @@
   "scripts": {
     "clean": "find ./packages -name 'node_modules' -exec rm -rf '{}' +",
     "bootstrap": "lerna bootstrap --hoist",
+
     "start": "npm run bootstrap && webpack-dev-server --env=dev",
+
     "build": "npm run clean && npm run bootstrap && webpack -p --env=prod",
     "analyze": "npm run bootstrap && webpack -p --env=analyze",
+
     "cy": "cypress open",
-    "cy-headless": "cypress run",
-    "cy-test": "cypress run --record --key 13738d3f-cf83-4160-a754-16f041e01008"
+    "test-cy": "cypress run",
+    "test-jest": "jest",
+
+    "test": "npm run test-jest && npm run start | npm run test-cy"
   },
   "repository": {
     "type": "git",
@@ -44,6 +49,7 @@
     "cypress": "^2.1.0",
     "flow-bin": "^0.59.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.4.3",
     "lerna": "^2.5.1",
     "react-hot-loader": "^3.1.3",
     "style-loader": "^0.19.0",
