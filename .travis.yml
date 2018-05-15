@@ -3,15 +3,15 @@ node_js:
   - "lts/*"
 
 cache:
+  yarn: true
   directories:
-    - ~/.npm
     - node_modules
 
 jobs:
   include:
-    - stage: initialize
-      script: npm run init
+    - stage: setup
+      script: yarn
     - stage: test
-      script: npm run test
+      script: yarn test
     - stage: build
-      script: npm run build
+      script: yarn build

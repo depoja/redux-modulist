@@ -1,4 +1,4 @@
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 
 const genUID = () =>
   Date.now().toString(36) +

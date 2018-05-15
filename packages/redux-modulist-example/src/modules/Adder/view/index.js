@@ -1,5 +1,5 @@
 import React from "react";
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 
 import { connect } from "react-redux";
 import { StyledAdder } from "./styles";

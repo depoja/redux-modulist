@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 
 const selectors = moduleState => {
   const getState = state => moduleState(state);

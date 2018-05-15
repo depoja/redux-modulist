@@ -1,22 +1,15 @@
 const webpack = require("webpack");
-const Config = require("webpack-config").Config;
+const base = require("./base.config");
 
-const dev = new Config().extend("./webpack/base.config").merge({
-  entry: {
-    example: ["babel-polyfill", "react-hot-loader/patch", "./packages/redux-modulist-example"]
-  },
-  plugins: [new webpack.NamedModulesPlugin(), new webpack.HotModuleReplacementPlugin()],
-  devtool: "source-map",
+module.exports = {
+  ...base,
+  mode: "development",
+  devtool: "cheap-module-eval-source-map",
   devServer: {
     port: 3100,
-    publicPath: "/",
-    contentBase: "./build", // Where static content will be served from
+    host: "0.0.0.0",
+    contentBase: "./packages/redux-modulist-example/build",
     historyApiFallback: true,
-    hot: true,
-    watchOptions: {
-      ignored: /node_modules/ // Required, otherwise reloading won't work correctly
-    }
+    publicPath: "/"
   }
-});
-
-module.exports = dev;
+};

@@ -1,9 +1,8 @@
 import React from "react";
-import loadable from "loadable-components";
 import { Route, Switch } from "react-router-dom";
 
-export const Home = loadable(() => import("./Home"));
-export const NotFound = loadable(() => import("./NotFound"));
+import Home from "./Home";
+import NotFound from "./NotFound";
 
 const Pages = () => (
   <Switch>

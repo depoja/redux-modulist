@@ -1,5 +1,5 @@
 import React from "react";
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 
 const App = ({ Module }) => <Module.view.todos />;
 

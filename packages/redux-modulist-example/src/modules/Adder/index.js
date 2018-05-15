@@ -1,4 +1,4 @@
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 
 import actions from "./actions";
 import view from "./view";

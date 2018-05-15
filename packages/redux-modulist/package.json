@@ -1,16 +1,29 @@
 {
   "name": "redux-modulist",
+  "description": "Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "main": "build/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turningspace/redux-modulist.git"
+  },
+  "keywords": [
+    "[\"redux\"",
+    "\"react\"",
+    "\"modular\"",
+    "\"architecture\"]"
+  ],
+  "author": "Klint Mane",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turningspace/redux-modulist/issues"
+  },
+  "homepage": "https://github.com/turningspace/redux-modulist#readme",
   "dependencies": {
-    "react": "^16.2.0",
-    "redux": "^3.7.2"
+    "redux-modulist-core": "*"
   }
 }

@@ -1,8 +1,7 @@
-const Config = require("webpack-config").Config;
 const BundleAnalyzer = require("webpack-bundle-analyzer");
+const prod = require("./prod.config");
 
-const analyze = new Config().extend("./webpack/prod.config").merge({
+module.exports = {
+  ...prod,
   plugins: [new BundleAnalyzer.BundleAnalyzerPlugin()]
-});
-
-module.exports = analyze;
+};

@@ -1,6 +1,12 @@
 const webpack = require("webpack");
-const Config = require("webpack-config").Config;
+const base = require("./base.config");
 
-const prod = new Config().extend("./webpack/base.config").merge({});
-
-module.exports = prod;
+module.exports = {
+  ...base,
+  mode: "production",
+  devtool: "source-map",
+  output: {
+    ...base.output,
+    libraryTarget: "umd"
+  }
+};

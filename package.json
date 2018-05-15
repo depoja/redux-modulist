@@ -1,60 +1,33 @@
 {
-  "name": "redux-modulist",
+  "name": "redux-modulist-workspace",
   "version": "0.0.1",
-  "description": "Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate",
-  "main": "build/dist.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "init": "npm i && npm run init:quick",
-    "init:quick": "lerna bootstrap --hoist",
-    "start": "webpack-dev-server --env=dev",
-    "build": "webpack -p --env=prod",
-    "build:detailed": "webpack -p --env=analyze",
-    "test": "npm run test:jest && start-server-and-test start http://localhost:3100 test:cy",
+    "start": "webpack-dev-server --config ./webpack/dev.config.js",
+    "build": "webpack --config ./webpack/prod.config.js",
+    "build:detailed": "webpack --config ./webpack/analyze.config.js",
+    "test": "yarn test:jest && start-server-and-test start http://localhost:3100 test:cy",
     "test:cy": "cypress run",
     "test:jest": "jest",
     "cy": "cypress open"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/turningspace/redux-modulist.git"
-  },
-  "keywords": [
-    "[\"redux\"",
-    "\"react\"",
-    "\"modular\"",
-    "\"architecture\"]"
-  ],
-  "author": "Klint Mane",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/turningspace/redux-modulist/issues"
-  },
-  "homepage": "https://github.com/turningspace/redux-modulist#readme",
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "css-loader": "^0.28.7",
+    "babel-preset-stage-2": "^6.24.1",
     "cypress": "^2.1.0",
-    "flow-bin": "^0.59.0",
-    "html-webpack-plugin": "^2.30.1",
     "jest": "^22.4.3",
-    "lerna": "^2.11.0",
-    "react-hot-loader": "^3.1.3",
     "start-server-and-test": "^1.4.1",
-    "style-loader": "^0.19.0",
-    "uglifyjs-webpack-plugin": "^1.1.2",
-    "wait-on": "^2.1.0",
-    "webpack": "^3.8.1",
-    "webpack-bundle-analyzer": "^2.9.1",
-    "webpack-config": "^7.5.0",
-    "webpack-dev-server": "^2.9.7"
+    "webpack": "^4.8.3",
+    "webpack-bundle-analyzer": "^2.12.0",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
   }
 }

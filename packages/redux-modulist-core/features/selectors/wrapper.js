@@ -1,4 +1,4 @@
-import { deepFindModule } from "_lib/utils";
+import { deepFindModule } from "../../utils";
 
 const wrapper = selectors => moduleInstance => selectors(state => deepFindModule(state, moduleInstance));
 

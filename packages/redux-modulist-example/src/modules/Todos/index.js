@@ -1,4 +1,4 @@
-import Module from "redux-modulist";
+import Module from "redux-modulist-core";
 
 import actions from "./actions";
 import reducer from "./reducer";

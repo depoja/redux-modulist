@@ -1,5 +1,5 @@
 import React from "react";
-import Modulist from "redux-modulist";
+import Modulist from "redux-modulist-core";
 import { TodoContainer } from "./styles";
 
 // We will use closures to give the module view, access to the module instance
