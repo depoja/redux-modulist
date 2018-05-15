@@ -4,7 +4,7 @@
   "description": "Modularizes the architecture of your redux applications, plus the simplicity, minus the boilerplate",
   "main": "build/dist.js",
   "scripts": {
-    "init": "npm i lerna && npm run init:quick",
+    "init": "npm i && npm run init:quick",
     "init:quick": "lerna bootstrap --hoist",
     "start": "webpack-dev-server --env=dev",
     "build": "webpack -p --env=prod",
